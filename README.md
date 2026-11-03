@@ -1,81 +1,230 @@
-# IoT Sentinel – Honeypot & Attack Analyzer (Fake Lab)
+# 🛡️ IoT Sentinel – Honeypot & Attack Analyzer
 
-A portfolio-friendly IoT security monitoring dashboard that demonstrates honeypot-style event collection, simulated IoT devices, rule-based event classification and alert analytics.
+<p align="center">
+  <strong>A Python-based IoT Security Monitoring & Attack Analysis Simulation Platform</strong>
+</p>
 
-> **Important:** This is a synthetic training simulation. It does not deploy a real honeypot, expose vulnerable services, capture packets, scan networks, or detect real attackers. All source IPs are reserved documentation addresses (TEST-NET ranges), and all events are generated locally.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Flask-Web%20Framework-green?logo=flask" />
+  <img src="https://img.shields.io/badge/Database-SQLite-lightgrey?logo=sqlite" />
+  <img src="https://img.shields.io/badge/Mode-Simulation-orange" />
+  <img src="https://img.shields.io/badge/Status-Development-yellow" />
+</p>
 
-## Features
-- Flask web dashboard with a responsive cream-and-green SOC interface
-- Three virtual IoT endpoints: router, camera and smart hub
-- One-click generation of synthetic attack events
-- Rule-based classification for brute-force patterns, port scans, suspicious logins, unauthorized access, traffic bursts, Telnet probes and configuration access
-- SQLite storage for local demo history
-- Analytics for event counts, services, event categories and synthetic source IPs
-- Clear demo history button
+## 📌 Project Overview
 
-## Requirements
-- Python 3.9+
-- pip
+**IoT Sentinel – Honeypot & Attack Analyzer** is a cybersecurity educational project designed to demonstrate IoT device monitoring, honeypot-style event generation, suspicious activity analysis and security alert management.
 
-## Run on Windows
-1. Extract this repository.
-2. Open Command Prompt in the `IoT-Sentinel-Fake-Lab` folder.
-3. Create a virtual environment:
+The platform provides a centralized SOC-style dashboard where users can simulate IoT security events, analyze attack patterns, monitor virtual devices and visualize generated security alerts.
 
-   ```bash
-   py -m venv .venv
-   .venv\Scripts\activate
-   ```
+It uses Python, Flask and SQLite to process and store synthetic security events in a controlled local environment.
 
-4. Install dependencies:
+> ⚠️ **Disclaimer:** This project currently operates in simulation mode. It generates synthetic attack events and fictional source IP addresses. It does not capture real network traffic, deploy real honeypot services or detect actual cyberattacks.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🎯 Project Objectives
 
-5. Start the application:
+- Understand IoT security monitoring concepts.
+- Demonstrate honeypot-style event collection.
+- Simulate common IoT attack scenarios.
+- Analyze suspicious activities using rule-based detection.
+- Generate security alerts based on event severity.
+- Monitor virtual IoT devices through a centralized dashboard.
+- Understand basic SOC monitoring and incident analysis workflows.
 
-   ```bash
-   python app.py
-   ```
+## ✨ Key Features
 
-6. Open `http://127.0.0.1:8000` in your browser.
-7. Select **Run simulation** to generate sample events.
+| Feature | Description |
+|---|---|
+| 📊 SOC Dashboard | Centralized security monitoring interface |
+| 🌐 IoT Device Simulation | Simulates router, smart camera and smart hub |
+| 🍯 Honeypot Simulation | Generates honeypot-style security events |
+| 🔍 Attack Analysis | Rule-based classification of suspicious events |
+| 🔐 Brute-Force Simulation | Generates repeated failed-login scenarios |
+| 🚨 Alert Management | Classifies events by severity |
+| 🌍 IP Analysis | Displays synthetic source IP addresses |
+| 📈 Security Analytics | Visualizes events by service and attack category |
+| 🗄️ SQLite Database | Stores locally generated event history |
+| 🧹 Clear Lab Data | Allows users to reset simulation history |
 
-## Project structure
+## 🛠️ Technologies Used
+
+- **Programming Language:** Python
+- **Backend Framework:** Flask
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Database:** SQLite
+- **Data Visualization:** Dashboard-based analytics
+- **Development Environment:** Windows
+
+## 🏗️ Project Architecture
 
 ```text
-IoT-Sentinel-Fake-Lab/
+IoT-Sentinel-Honeypot-Analyzer/
+│
 ├── app.py
 ├── requirements.txt
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .env.example
+│
 ├── database/
 │   └── db_manager.py
+│
 ├── detection/
 │   └── attack_detector.py
+│
 ├── simulation/
 │   ├── attack_generator.py
 │   └── device_simulator.py
+│
 ├── templates/
 │   └── index.html
+│
 └── static/
-    ├── css/style.css
-    └── js/app.js
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── app.js
 ```
 
-## How the demo works
-1. The browser sends a request to `/api/simulate`.
-2. Python generates fictional events and reserved example IP addresses.
-3. The rule-based detector assigns a severity and explanatory rule label.
-4. SQLite stores the event locally in `database/iot_sentinel_demo.db`.
-5. The dashboard refreshes its counters, charts and event table from the local API.
+## ⚙️ How It Works
 
-## Safety and data
-- No real credentials, user data, API keys or real attacker IPs are included.
-- The SQLite database is generated automatically on first run and is excluded from Git by `.gitignore`.
-- Use only in a local learning/demo environment. Do not describe generated events as real captured attacks.
+1. **Device Simulation:** Creates three virtual IoT devices representing a home router, smart camera and smart hub.
+2. **Event Generation:** Generates synthetic security events using predefined attack scenarios.
+3. **Attack Detection:** Applies rule-based logic to classify generated events.
+4. **Severity Classification:** Assigns Low, Medium, High or Critical severity.
+5. **Database Storage:** Stores generated events in a local SQLite database.
+6. **Dashboard Analysis:** Displays event statistics, source IPs, device information and security alerts.
 
-## Suggested GitHub description
-A Flask-based IoT honeypot-style security dashboard with synthetic attack simulation, rule-based event analysis, SQLite logging and SOC-style analytics.
+## 🔬 Simulated Attack Scenarios
 
-## License
-MIT – add your preferred license file before public distribution if required.
+The project demonstrates the following scenarios:
+
+- Brute-force login attempts
+- Port scanning
+- Suspicious login activity
+- Unauthorized access attempts
+- Unusual traffic bursts
+- Telnet service probing
+- Suspicious configuration access
+
+All scenarios are generated locally for educational purposes.
+
+## 💻 Installation & Setup
+
+### Prerequisites
+
+- Python 3.9 or later
+- pip package manager
+- Windows / Linux
+- Git (optional)
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/siddhi-3105/IoT-Sentinel-Honeypot-Analyzer.git
+```
+
+### Step 2: Navigate to the Project
+
+```bash
+cd IoT-Sentinel-Honeypot-Analyzer
+```
+
+### Step 3: Create a Virtual Environment
+
+```bash
+py -m venv .venv
+```
+
+### Step 4: Activate the Environment
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### Step 5: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 6: Run the Application
+
+```bash
+python app.py
+```
+
+### Step 7: Open the Dashboard
+
+Visit:
+
+```text
+http://127.0.0.1:8000
+```
+
+Click **Run Simulation** to generate synthetic security events.
+
+## 📊 Dashboard Monitoring
+
+The dashboard provides:
+
+- Captured event statistics
+- Failed login counts
+- Number of simulated IoT devices
+- Generated security alerts
+- Events categorized by service
+- Attack category distribution
+- Synthetic source IP analysis
+- Recent security event logs
+
+## 🔒 Security & Data Privacy
+
+- No real attacker IP addresses are used.
+- No real credentials or personal information are included.
+- No external network scanning is performed.
+- The SQLite database is created locally.
+- Local database files are excluded from GitHub using `.gitignore`.
+
+## 🚀 Future Enhancements
+
+- Real isolated IoT honeypot deployment.
+- Live network traffic monitoring.
+- Integration with additional threat intelligence sources.
+- Advanced anomaly detection using machine learning.
+- Interactive attack timeline visualization.
+- SIEM integration.
+- Detailed incident reports and export functionality.
+
+These are planned enhancements and are not currently implemented.
+
+## 🎓 Learning Outcomes
+
+Through this project, I explored:
+
+- IoT cybersecurity concepts.
+- Honeypot architecture fundamentals.
+- Attack simulation techniques.
+- Rule-based threat detection.
+- Security event logging and analysis.
+- Flask application development.
+- Database integration.
+- SOC dashboard design.
+
+## 👩‍💻 Developer
+
+**Siddhi Kshirsagar**
+
+B.Sc. Cyber and Digital Science Student  
+Cybersecurity | SOC Analysis | Network Security | Digital Forensics
+
+🔗 **GitHub:** https://github.com/siddhi-3105
+
+---
+
+⭐ If you find this project useful for learning IoT cybersecurity, consider giving the repository a star.
+
+**Note:** This project is intended for educational, research and demonstration purposes only.
